@@ -33,8 +33,16 @@ body {
 }
 
 .paper.image {
-  padding: 10px;
+  padding: 20px;
+  box-sizing: border-box; /* Ensures padding is included in width/height */
 }
+
+.paper.image img {
+  width: 100%; /* Make the image take the full width of its parent */
+  height: auto; /* Keep the aspect ratio */
+  object-fit: contain; /* Ensure the image fits within the container */
+}
+
 .paper.image p {
   font-size: 30px;
 }
